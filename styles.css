@@ -78,7 +78,7 @@ h1 > .magic {
     background: linear-gradient(
         to right,
         blue,
-        aquamarine
+        pink
     );
     filter: blur(200px);
 }
@@ -88,5 +88,11 @@ h1 > .magic {
     width: 100%;
     position: absolute;
     z-index: 2;
-    backdrop-filter: blur(200px);
+    backdrop-filter: blur(50px);
+}
+
+#hax {
+    color: white;
+    font-weight: bold;
+    font-family: "Space Mono", monospace;
 }
