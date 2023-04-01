@@ -33,6 +33,7 @@ h1 {
     margin: 0px;
     padding: 20px;
     text-align: center;
+    z-index: 3;
 }
 
 h1 > .magic {
@@ -48,4 +49,44 @@ h1 > .magic {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         white-space: nowrap;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+#blob {
+    background-color: white;
+    animation: rotate 20s infinite;
+    height: 200px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to right,
+        blue,
+        aquamarine
+    );
+    filter: blur(200px);
+}
+
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(200px);
 }
